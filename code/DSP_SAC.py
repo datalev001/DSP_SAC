@@ -128,7 +128,7 @@ print("✅ Training done.\n")
 # =========================================================
 # Evaluate one full "day" & collect traces
 # =========================================================
-# ----- 5. Evaluation on a new day -----
+# -----  Evaluation on a new day -----
 obs = env.reset()            # single ndarray
 spend_trace = []; rev_trace = []; lam_trace = []; rew_trace = []
 
@@ -173,7 +173,7 @@ plt.title("Smoothed reward during eval"); plt.xlabel("step"); plt.ylabel("reward
 plt.tight_layout(); plt.show()
 
 # =========================================================
-# 7. Export tomorrow's bid list (2 000 rows)
+#  Export tomorrow's bid list (2 000 rows)
 # =========================================================
 tomorrow = df.sample(2_000, random_state=123).copy()
 tomorrow["rec_bid"] = 0.0
